@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <title> Emot AI </title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <style>
+        .home-main {
+            background: #5812c5;
+            color: #fff;
+            padding: 13%;
+            text-align: center;
+        }
+        
+        .home-main>h1 {
+            color: #fff;
+            font-family: : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        .blinker {
+            animation: blinker 1.5s linear infinite;
+        }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        .home-main button {
+            background: #fff;
+            color: #5812c5;
+            border-radius: 0;
+            font-weight: 700;
+            width: 16%;
+            height: 50px;
+            top: 4%;
+            margin-top: 3%;
+        }
+        
+        .home-main button:hover {
+            transition: 1s ease;
+            color: #5812c5;
+            width: 19%;
+        }
+        
+        .content1-left {
+            padding: 9%;
+        }
+        
+        .content1-right {
+            padding: 9%;
+            background: #e4e4e4;
+        }
+        
+        .home-content2 {
+            background: #adb5bd;
+            padding: 1.4%;
+            text-align: center;
+        }
+        
+        .home-content2 p {
+            font-size: 18px;
+            line-height: 50px;
+        }
+        
+        .home-content2 p span {
+            font-weight: 500;
+        }
+    </style>
+
+    <div class="container-fluid home-main">
+        <div class="row">
+            <div class="col-12">
+                <h1>Emot AI</h1>
+                <h2><span class="blinker">(o.o)</span></h2>
+                <button type="button" class="btn btn-default">View Code</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid home-content1">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 content1-left">
+                <form name="form_ai" method="POST">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="text">Text: </label>
+                            <input type="text" class="form-control" id="text" placeholder="text" name="text" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Check</button>
+                        <button type="reset" class="btn btn-danger">Clear</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-12 content1-right">
+                <h3>Predicted Emotion <span class="blinker">?</span></h3>
+                <h4> {{ emotion }} </h4>
+                <p>With a Confidence of {{ confidence }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid home-content2">
+        <div class="row">
+            <div class="col-12">
+                <h2><span class="blinker">Developed by Antony J Malakkaran</span></h2>
+                <a href="https://github.com/antonyjm462"><button type="button" class="btn btn-dark">GitHub</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
